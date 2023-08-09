@@ -1,0 +1,17 @@
+.title_letter {
+	font-size: 40px;
+	border: 3px solid white;
+	padding: 15px;
+	width: 65px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	font-weight: bold;
+	color: white;
+}
+
+.title_letter:hover {
+	transition: 0.5s;
+	width: 90px;
+}

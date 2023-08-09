@@ -1,0 +1,23 @@
+.defeat {
+	min-height: 500px;
+	min-width: 310px;
+	height: 98vh;
+	width: 98vw;
+	background-color: rgba(177, 44, 44, 0.909);
+	position: absolute;
+	border: 2px solid red;
+	z-index: 2;
+	top:  1%;
+	left: 1%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.defeat > span {
+	font-size: 30px;
+	font-weight: bold;
+	padding: 10px;
+}

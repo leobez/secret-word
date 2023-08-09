@@ -1,0 +1,23 @@
+.victory {
+	min-height: 500px;
+	min-width: 310px;
+	height: 98vh;
+	width: 98vw;
+	background-color: rgba(53, 201, 215, 0.909);
+	position: absolute;
+	border: 3px solid green;
+	z-index: 2;
+	top:  1%;
+	left: 1%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.victory > span {
+	font-size: 30px;
+	font-weight: bold;
+	padding: 10px;
+}

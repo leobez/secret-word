@@ -1,0 +1,36 @@
+.start_page_main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 80px;
+}
+
+/* AREA DE TITULO */
+.title_container {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.first_title {
+	display: flex;
+	gap: 5px;
+}
+
+.second_title {
+	display: flex;
+	gap: 5px;
+	justify-content: center;
+}
+
+/* AREA DA DESCRIÇÃO */
+.page_description {
+	color: white;
+	font-weight: bold;
+}
+
+/* AREA DO BOTÃO */
+.buttton_container {
+
+}
