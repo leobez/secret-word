@@ -1,23 +1,24 @@
 .defeat {
-	min-height: 500px;
-	min-width: 310px;
-	height: 98vh;
-	width: 98vw;
-	background-color: rgba(177, 44, 44, 0.909);
-	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(219, 26, 26, 0.909);
 	border: 2px solid red;
 	z-index: 2;
-	top:  1%;
-	left: 1%;
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	gap: 20px;
+
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .defeat > span {
-	font-size: 30px;
+	font-size: 25px;
 	font-weight: bold;
 	padding: 10px;
 }

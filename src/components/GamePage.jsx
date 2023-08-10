@@ -15,7 +15,7 @@ const GamePage = ({Function}) => {
 	])
 
 	const selectWord = () => {
-		if (wordList.length <= 0) return console.log("Acabaram as palavras!");
+		if (wordList.length <= 0) return;
 
 		const randNumber = Math.floor(Math.random() * wordList.length)
 		const wordSelected = wordList[randNumber]
@@ -54,10 +54,6 @@ const GamePage = ({Function}) => {
 	useEffect(() => {
 		verifyListCompleted()
 	}, [wordList]);
-
-	useEffect(() => {
-		console.log("PALAVRA ATUAL: " + wordSelected.word)
-	}, [wordSelected]);
 
 	const [forceRenderKey, setForceRenderKey] = useState(0);
 	const forceRender = () => {
@@ -104,7 +100,6 @@ const GamePage = ({Function}) => {
 
 	const stillHasAttempts = () => {
 		if (attempts <= 0) {
-			console.log("TENTATIVAS ACABARAM! EXIBIR TELA DE DERROTA")
 			setLose(true)
 			return false
 		}
@@ -124,7 +119,6 @@ const GamePage = ({Function}) => {
 		if (indexes_found.length <= 0) {
 			decreasePoints()
 			decreaseAttempts()
-			console.log("NÃO TINHA ESSA LETRA, DIMINUIR PONTUAÇÃO E TENTATIVAS")
 		}
 
 		return handleLetter(indexes_found)
@@ -168,14 +162,11 @@ const GamePage = ({Function}) => {
 		}
 
 		// Se chegar aqui, é pq a palavra foi achada
-		console.log("PALAVRA FOI ACHADA")
-
 		// Verificando se ainda tem palavra a serem achadas
 		if (!verifyListCompleted()) {
 			increasePoints()
 			resetCache()
 			resetAttempts()
-			console.log("INDO PARA PRÓXIMA PALAVRA ...")
 			changeWord()
 		}
 
@@ -184,12 +175,9 @@ const GamePage = ({Function}) => {
 
 	const verifyListCompleted = () => {
 		if (wordList.length <= 0 && verifyWordCompleted(true)) {
-			console.log("GANHOU TUDO! EXIBIR TELA DE VITÓRIA!")
 			setWin(true)
 			return true
 		}
-
-		console.log("JOGO NAO ACABOU AINDA ...")
 		return false
 	}
 

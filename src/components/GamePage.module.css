@@ -29,6 +29,7 @@
 .button_can_be {
 	border-color: green;
 }
+
 .button_can_be:hover {
 	background-color: rgba(12, 220, 119, 0.707);
 	color: white;

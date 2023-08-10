@@ -1,5 +1,8 @@
 .game_board {
 	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
 }
 
 .letter_container {

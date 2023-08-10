@@ -11,24 +11,34 @@
 	display: flex;
 	flex-direction: column;
 	gap: 5px;
+	width: 100%;
 }
 
 .first_title {
 	display: flex;
+	justify-content: center;
 	gap: 5px;
+	flex-wrap: wrap;
 }
 
 .second_title {
 	display: flex;
 	gap: 5px;
 	justify-content: center;
+	flex-wrap: wrap;
 }
 
 /* AREA DA DESCRIÇÃO */
 .page_description {
 	color: white;
 	font-weight: bold;
+	text-align: center;
 }
+
+.page_description > span {
+	font-size: 22px;
+}
+
 
 /* AREA DO BOTÃO */
 .buttton_container {
