@@ -1,18 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import styles from './GamePage.module.css'
 import GameBoard from './GameBoard'
 import VictoryScreen from './VictoryScreen'
 import DefeatScreen from './DefeatScreen'
 
+import {wordsList} from "../data/wordList"
+
 const GamePage = ({Function}) => {
 
-	const [wordList, setWordList] = useState([
-		{id: 1, word: "UVA"			, tip: "Fruta"				, used: false},
-		{id: 2, word: "PERNA"		, tip: "Parte do corpo"		, used: false},
-		{id: 3, word: "PIANO"		, tip: "Instrumento"		, used: false},
-		{id: 4, word: "CPU"			, tip: "Computador"			, used: false},
-		{id: 5, word: "ALFACE"		, tip: "Vegetal"			, used: false}
-	])
+	const [wordList, setWordList] = useState(wordsList)
 
 	const selectWord = () => {
 		if (wordList.length <= 0) return;
@@ -36,6 +32,7 @@ const GamePage = ({Function}) => {
 	const [lettersCache			, setLettersCache] 			= useState("")
 	const [win					, setWin]					= useState(false)
 	const [lose					, setLose]					= useState(false)
+	const letterInputRef									= useRef(null)
 
 	const handleChange = (event) => {
 		const regex = /^([a-zA-Z])$/.test(event.target.value)
@@ -74,6 +71,8 @@ const GamePage = ({Function}) => {
 				return previousState + `${letterTyped.toLowerCase()}`
 			})
 		}
+
+		letterInputRef.current.focus()
 	}
 
 	const letterNotTypedYet = () => {
@@ -181,10 +180,6 @@ const GamePage = ({Function}) => {
 		return false
 	}
 
-	const renderPage = () => {
-
-	}
-
 	return (
 		<div className={styles.game_page}>
 
@@ -221,7 +216,7 @@ const GamePage = ({Function}) => {
 
 				<div className={styles.user_input_input_area}>
 					{/* CAIXA DE INPUT */}
-					<input type="text" name="letter" id="letter" className={styles.letter_input} maxLength={1} onChange={handleChange}/>
+					<input type="text" name="letter" id="letter" className={styles.letter_input} maxLength={1} onChange={handleChange} ref={letterInputRef}/>
 
 					{/* BOTÃO DE JOGAR */}
 					{
