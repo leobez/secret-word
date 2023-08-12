@@ -39,6 +39,6 @@ button {
 
 button:hover {
 	cursor: pointer;
-	transition: 0.5s;
+	transition: 0s;
 	letter-spacing: 3px;
 }

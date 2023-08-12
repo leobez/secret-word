@@ -221,7 +221,8 @@ const GamePage = ({Function}) => {
 					{/* BOTÃO DE JOGAR */}
 					{
 						(letterCanBeSubmitted && !lettersCache.includes(letterTyped)) ? 
-						(<button className={styles.button_can_be} onClick={handleLetterSubmit}>JOGAR!</button>) 
+
+						(<button className={styles.button_can_be} onClick={handleLetterSubmit} >JOGAR!</button>) 
 						: 
 						(<button className={styles.button_cannot_be}>JOGAR!</button>)
 					}
