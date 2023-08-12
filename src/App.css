@@ -1,13 +1,14 @@
-.App {
-	height: 100vh;
-	width: 100vw;
+#root {
 	
+}
+
+.App {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-
-	padding: 5px;
+	height: 100%;
+	width: 100%;
+	padding: 10px;
 	border: 5px solid black;
-	background-color: rgb(24, 38, 69);
 }
