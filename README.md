@@ -1,5 +1,5 @@
 # secret-word
 
- Projeto em REACT de um jogo de adivinhação de palavras.
+Jogo de adivinhação de palavras feito com react.
 
- Clique para acessar: [Aqui](https://leobez.github.io/secret-word/)
+Clique para acessar: [Aqui](https://leobez.github.io/secret-word/)
